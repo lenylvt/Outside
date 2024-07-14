@@ -5,76 +5,85 @@
 //  Created by Leny Levant on 14/07/2024.
 //
 
+import SwiftUI
 import ActivityKit
 import WidgetKit
-import SwiftUI
 
-struct ParentLiveAttributes: ActivityAttributes {
+struct ReminderAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var emoji: String
+        var reminderInterval: TimeInterval
     }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
 }
 
-struct ParentLiveLiveActivity: Widget {
-    var body: some WidgetConfiguration {
-        ActivityConfiguration(for: ParentLiveAttributes.self) { context in
-            // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello \(context.state.emoji)")
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
+@main
+struct ParentLiveWidgetBundle: WidgetBundle {
+    var body: some Widget {
+        ReminderLiveActivity()
+    }
+}
 
+struct ReminderLiveActivity: Widget {
+    var body: some WidgetConfiguration {
+        ActivityConfiguration(for: ReminderAttributes.self) { context in
+            LockScreenLiveActivityView(state: context.state)
         } dynamicIsland: { context in
             DynamicIsland {
-                // Expanded UI goes here.  Compose the expanded UI through
-                // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Text("You are outside!")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.top, 20) // Add padding at the top
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Text("Auto-Remember Active")
+                        .font(.caption)
+                        .padding(.bottom, 20) // Add padding at the bottom
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
-                    // more content
+                    Text("Remember to send message to parent")
+                        .font(.caption2)
+                    Text("Every \(formatTimeInterval(context.state.reminderInterval))")
+                        .font(.caption2)
                 }
             } compactLeading: {
-                Text("L")
+                Image(systemName: "person.wave.2")
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+                Text(formatTimeInterval(context.state.reminderInterval))
+                    .font(.caption2)
             } minimal: {
-                Text(context.state.emoji)
+                Image(systemName: "person.wave.2")
             }
-            .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
         }
     }
-}
-
-extension ParentLiveAttributes {
-    fileprivate static var preview: ParentLiveAttributes {
-        ParentLiveAttributes(name: "World")
+    
+    private func formatTimeInterval(_ interval: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute]
+        formatter.unitsStyle = .abbreviated
+        return formatter.string(from: interval) ?? ""
     }
 }
 
-extension ParentLiveAttributes.ContentState {
-    fileprivate static var smiley: ParentLiveAttributes.ContentState {
-        ParentLiveAttributes.ContentState(emoji: "😀")
-     }
-     
-     fileprivate static var starEyes: ParentLiveAttributes.ContentState {
-         ParentLiveAttributes.ContentState(emoji: "🤩")
-     }
-}
-
-#Preview("Notification", as: .content, using: ParentLiveAttributes.preview) {
-   ParentLiveLiveActivity()
-} contentStates: {
-    ParentLiveAttributes.ContentState.smiley
-    ParentLiveAttributes.ContentState.starEyes
+struct LockScreenLiveActivityView: View {
+    let state: ReminderAttributes.ContentState
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("You are outside!")
+                .font(.largeTitle)
+                .bold()
+                .padding(.top, 20) // Add padding at the top
+            Text("Auto-Remember Active for Every : \(formatTimeInterval(state.reminderInterval))")
+                .font(.caption)
+                .padding(.bottom, 20) // Add padding at the bottom
+        }
+        .padding(.vertical, 20) // Add padding at the top and bottom
+    }
+    
+    private func formatTimeInterval(_ interval: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute]
+        formatter.unitsStyle = .abbreviated
+        return formatter.string(from: interval) ?? ""
+    }
 }

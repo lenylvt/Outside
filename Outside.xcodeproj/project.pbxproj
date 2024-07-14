@@ -14,6 +14,12 @@
 		B309C23E2C435905004822E7 /* OutsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309C23D2C435905004822E7 /* OutsideTests.swift */; };
 		B309C2482C435905004822E7 /* OutsideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309C2472C435905004822E7 /* OutsideUITests.swift */; };
 		B309C24A2C435905004822E7 /* OutsideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309C2492C435905004822E7 /* OutsideUITestsLaunchTests.swift */; };
+		B35F41992C43F31300FB9592 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B309C25E2C4361A7004822E7 /* WidgetKit.framework */; };
+		B35F419A2C43F31300FB9592 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B309C2602C4361A7004822E7 /* SwiftUI.framework */; };
+		B35F419D2C43F31300FB9592 /* ParentLiveLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F419C2C43F31300FB9592 /* ParentLiveLiveActivity.swift */; };
+		B35F41A52C43F31300FB9592 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F41A42C43F31300FB9592 /* AppIntent.swift */; };
+		B35F41A72C43F31600FB9592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35F41A62C43F31600FB9592 /* Assets.xcassets */; };
+		B35F41AB2C43F31600FB9592 /* ParentLiveExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B35F41982C43F31300FB9592 /* ParentLiveExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,13 @@
 			remoteGlobalIDString = B309C2282C435903004822E7;
 			remoteInfo = Outside;
 		};
+		B35F41A92C43F31600FB9592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B309C2212C435903004822E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B35F41972C43F31300FB9592;
+			remoteInfo = ParentLiveExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				B35F41AB2C43F31600FB9592 /* ParentLiveExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +73,12 @@
 		B309C2492C435905004822E7 /* OutsideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B309C25E2C4361A7004822E7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B309C2602C4361A7004822E7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B35F41932C43F24600FB9592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B35F41982C43F31300FB9592 /* ParentLiveExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ParentLiveExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35F419C2C43F31300FB9592 /* ParentLiveLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentLiveLiveActivity.swift; sourceTree = "<group>"; };
+		B35F41A42C43F31300FB9592 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		B35F41A62C43F31600FB9592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B35F41A82C43F31600FB9592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +103,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B35F41952C43F31300FB9592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35F419A2C43F31300FB9592 /* SwiftUI.framework in Frameworks */,
+				B35F41992C43F31300FB9592 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +121,7 @@
 				B309C22B2C435903004822E7 /* Outside */,
 				B309C23C2C435905004822E7 /* OutsideTests */,
 				B309C2462C435905004822E7 /* OutsideUITests */,
+				B35F419B2C43F31300FB9592 /* ParentLive */,
 				B309C25D2C4361A7004822E7 /* Frameworks */,
 				B309C22A2C435903004822E7 /* Products */,
 			);
@@ -103,6 +133,7 @@
 				B309C2292C435903004822E7 /* Outside.app */,
 				B309C2392C435905004822E7 /* OutsideTests.xctest */,
 				B309C2432C435905004822E7 /* OutsideUITests.xctest */,
+				B35F41982C43F31300FB9592 /* ParentLiveExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +141,7 @@
 		B309C22B2C435903004822E7 /* Outside */ = {
 			isa = PBXGroup;
 			children = (
+				B35F41932C43F24600FB9592 /* Info.plist */,
 				B309C22C2C435903004822E7 /* OutsideApp.swift */,
 				B309C22E2C435903004822E7 /* ContentView.swift */,
 				B309C2302C435905004822E7 /* Assets.xcassets */,
@@ -152,6 +184,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B35F419B2C43F31300FB9592 /* ParentLive */ = {
+			isa = PBXGroup;
+			children = (
+				B35F419C2C43F31300FB9592 /* ParentLiveLiveActivity.swift */,
+				B35F41A42C43F31300FB9592 /* AppIntent.swift */,
+				B35F41A62C43F31600FB9592 /* Assets.xcassets */,
+				B35F41A82C43F31600FB9592 /* Info.plist */,
+			);
+			path = ParentLive;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +210,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B35F41AA2C43F31600FB9592 /* PBXTargetDependency */,
 			);
 			name = Outside;
 			productName = Outside;
@@ -209,6 +253,23 @@
 			productReference = B309C2432C435905004822E7 /* OutsideUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B35F41972C43F31300FB9592 /* ParentLiveExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B35F41AC2C43F31600FB9592 /* Build configuration list for PBXNativeTarget "ParentLiveExtension" */;
+			buildPhases = (
+				B35F41942C43F31300FB9592 /* Sources */,
+				B35F41952C43F31300FB9592 /* Frameworks */,
+				B35F41962C43F31300FB9592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParentLiveExtension;
+			productName = ParentLiveExtension;
+			productReference = B35F41982C43F31300FB9592 /* ParentLiveExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +291,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = B309C2282C435903004822E7;
 					};
+					B35F41972C43F31300FB9592 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = B309C2242C435903004822E7 /* Build configuration list for PBXProject "Outside" */;
@@ -248,6 +312,7 @@
 				B309C2282C435903004822E7 /* Outside */,
 				B309C2382C435905004822E7 /* OutsideTests */,
 				B309C2422C435905004822E7 /* OutsideUITests */,
+				B35F41972C43F31300FB9592 /* ParentLiveExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +338,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B35F41962C43F31300FB9592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35F41A72C43F31600FB9592 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +378,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B35F41942C43F31300FB9592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35F41A52C43F31300FB9592 /* AppIntent.swift in Sources */,
+				B35F419D2C43F31300FB9592 /* ParentLiveLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = B309C2282C435903004822E7 /* Outside */;
 			targetProxy = B309C2442C435905004822E7 /* PBXContainerItemProxy */;
+		};
+		B35F41AA2C43F31600FB9592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B35F41972C43F31300FB9592 /* ParentLiveExtension */;
+			targetProxy = B35F41A92C43F31600FB9592 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -451,6 +538,8 @@
 				DEVELOPMENT_TEAM = DL4Y78QH78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Outside/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,6 +569,8 @@
 				DEVELOPMENT_TEAM = DL4Y78QH78;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Outside/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +661,60 @@
 			};
 			name = Release;
 		};
+		B35F41AD2C43F31600FB9592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DL4Y78QH78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParentLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParentLive;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lifes.Outside.ParentLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B35F41AE2C43F31600FB9592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DL4Y78QH78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParentLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParentLive;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lifes.Outside.ParentLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +750,15 @@
 			buildConfigurations = (
 				B309C2542C435905004822E7 /* Debug */,
 				B309C2552C435905004822E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35F41AC2C43F31600FB9592 /* Build configuration list for PBXNativeTarget "ParentLiveExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B35F41AD2C43F31600FB9592 /* Debug */,
+				B35F41AE2C43F31600FB9592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
