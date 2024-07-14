@@ -95,7 +95,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.purple.opacity(0.5)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.green.opacity(0.5), Color.red.opacity(0.5)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 30) {
@@ -137,7 +137,6 @@ struct ContentView: View {
                         .frame(minWidth: 200)
                         .background(reminderManager.isTimerActive ? Color.green : Color.blue)
                         .cornerRadius(10)
-                        .shadow(radius: 5)
                 }
                 
                 if reminderManager.isTimerActive {
