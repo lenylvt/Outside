@@ -33,6 +33,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B309C2762C4361A9004822E7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B309C2292C435903004822E7 /* Outside.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outside.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B309C22C2C435903004822E7 /* OutsideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideApp.swift; sourceTree = "<group>"; };
@@ -44,6 +57,8 @@
 		B309C2432C435905004822E7 /* OutsideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B309C2472C435905004822E7 /* OutsideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideUITests.swift; sourceTree = "<group>"; };
 		B309C2492C435905004822E7 /* OutsideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B309C25E2C4361A7004822E7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B309C2602C4361A7004822E7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +92,7 @@
 				B309C22B2C435903004822E7 /* Outside */,
 				B309C23C2C435905004822E7 /* OutsideTests */,
 				B309C2462C435905004822E7 /* OutsideUITests */,
+				B309C25D2C4361A7004822E7 /* Frameworks */,
 				B309C22A2C435903004822E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +143,15 @@
 			path = OutsideUITests;
 			sourceTree = "<group>";
 		};
+		B309C25D2C4361A7004822E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B309C25E2C4361A7004822E7 /* WidgetKit.framework */,
+				B309C2602C4361A7004822E7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +162,7 @@
 				B309C2252C435903004822E7 /* Sources */,
 				B309C2262C435903004822E7 /* Frameworks */,
 				B309C2272C435903004822E7 /* Resources */,
+				B309C2762C4361A9004822E7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);

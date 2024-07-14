@@ -32,8 +32,8 @@ class ReminderManager: ObservableObject {
     
     private func scheduleRepeatingNotifications() {
         let content = UNMutableNotificationContent()
-        content.title = "Parent Prevention Reminder"
-        content.body = "It's time to prevent your parent!"
+        content.title = "⚠️ Time to Prevent ⚠️"
+        content.body = "It's time to prevent your parent about how you are!"
         content.sound = .default
         
         // Créer un déclencheur qui se répète
@@ -68,7 +68,7 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 30) {
-                Text("Parent Prevention Reminder")
+                Text("Parent Prevention")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .padding()
@@ -84,10 +84,6 @@ struct ContentView: View {
                         .datePickerStyle(WheelDatePickerStyle())
                         .labelsHidden()
                     
-                    Stepper(value: $reminderManager.seconds, in: 0...59) {
-                        Text("Seconds: \(reminderManager.seconds)")
-                            .foregroundColor(.white)
-                    }
                 }
                 .padding()
                 .background(Color.white.opacity(0.2))
