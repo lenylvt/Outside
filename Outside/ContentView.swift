@@ -89,54 +89,6 @@ class ReminderManager: ObservableObject {
     }
 }
 
-struct ReminderLiveActivity: Widget {
-    var body: some WidgetConfiguration {
-        ActivityConfiguration(for: ReminderAttributes.self) { context in
-            VStack(spacing: 8) {
-                Text("You are outside!")
-                    .font(.headline)
-                Text("Remember to send message to parent")
-                    .font(.subheadline)
-                Text("Auto-Remember Active")
-                    .font(.caption)
-                Text("Every \(formatTimeInterval(context.state.reminderInterval))")
-                    .font(.caption2)
-            }
-        } dynamicIsland: { context in
-            DynamicIsland {
-                DynamicIslandExpandedRegion(.leading) {
-                    Text("You are outside!")
-                        .font(.headline)
-                }
-                DynamicIslandExpandedRegion(.trailing) {
-                    Text("Auto-Remember Active")
-                        .font(.caption)
-                }
-                DynamicIslandExpandedRegion(.bottom) {
-                    Text("Remember to send message to parent")
-                        .font(.caption2)
-                    Text("Every \(formatTimeInterval(context.state.reminderInterval))")
-                        .font(.caption2)
-                }
-            } compactLeading: {
-                Image(systemName: "person.wave.2")
-            } compactTrailing: {
-                Text(formatTimeInterval(context.state.reminderInterval))
-                    .font(.caption2)
-            } minimal: {
-                Image(systemName: "person.wave.2")
-            }
-        }
-    }
-    
-    private func formatTimeInterval(_ interval: TimeInterval) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute]
-        formatter.unitsStyle = .abbreviated
-        return formatter.string(from: interval) ?? ""
-    }
-}
-
 struct ContentView: View {
     @StateObject private var reminderManager = ReminderManager()
     @State private var showingAlert = false
